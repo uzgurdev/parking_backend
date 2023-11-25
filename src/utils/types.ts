@@ -1,5 +1,5 @@
 export namespace IEntity {
-  export type carType = "electric" | "hybrid" | "petal";
+  export type carType = "electric" | "hybrid" | "petrol";
 
   export interface Car {
     id: string;
@@ -8,6 +8,7 @@ export namespace IEntity {
     price: number;
     arrivedTime: number;
     overallTime: number;
+    overallPrice: number;
     departureTime: number;
   }
 
@@ -19,4 +20,10 @@ export namespace IEntity {
     freeSpace: number;
     currentCapacity: number;
   }
+}
+
+export interface IResponse {
+  data: IEntity.Parking | IEntity.Car;
+  message: string;
+  success: boolean;
 }
